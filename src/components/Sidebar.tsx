@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import menuBar from '../assets/menu.svg';
 import { Link } from 'react-router-dom';
 
-export const SlideBar = () => {
+export const Sidebar = () => {
 
   const { pathname } = useLocation();
 
@@ -17,9 +17,9 @@ export const SlideBar = () => {
 
       <div className='flex justify-center items-center flex-col p-3'>
           <Link
-          to='/dashboard'
+          to='/'
           className={
-            `${pathname === '/dashboard'
+            `${pathname === '/'
               ? 'text-gray-400'
               : 'text-white'
             } my-3 hover:text-gray-300 transition-all`}
@@ -37,7 +37,7 @@ export const SlideBar = () => {
             Cargar Cliente
           </Link>
           <Link
-            to='/updateclient'
+            to='/editclient'
             className={
               `${pathname === '/updateclient'
                 ? 'text-gray-400'
@@ -47,7 +47,7 @@ export const SlideBar = () => {
             Editar Cliente
           </Link>
           <Link
-            to='/user-perfil'
+            to='/user'
             className={
               `${pathname === '/user-perfil'
                 ? 'text-gray-400'
