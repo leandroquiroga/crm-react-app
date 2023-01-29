@@ -1,14 +1,15 @@
 import React from 'react'
 import { Sidebar } from '../components/Sidebar';
 import { Outlet } from 'react-router-dom';
+// import { Container } from '@mui/system';
 
 export const Layout = () => {
   return (
-    <div className='flex h-screen'>
+    <section className='flex h-screen'>
       <Sidebar />
       <main className='flex-initial w-full'>
         <Outlet/>
       </main>
-    </div>
+    </section>
   )
 }
