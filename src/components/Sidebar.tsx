@@ -1,69 +1,99 @@
 import { useLocation } from 'react-router-dom';
-import menuBar from '../assets/menu.svg';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import Typography from '@mui/material/Typography';
+import MenuRoundedIcon from '@mui/icons-material/Menu';
+import { Box, Divider, List } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export const Sidebar = () => {
-
   const { pathname } = useLocation();
-
-  
   return (
-    <aside className='flex-initial w-80 bg-sky-900 text-white flex flex-col flex-wrap justify-between'>
+    <Box
+      className='flex-initial w-96 flex flex-col justify-between p-3 bg-cyan-700'
+    >
+        <Box className='flex justify-between items-center p-2'>
 
-      <div className='flex justify-between items-center p-2'>
-        <h1 className='text-xl font-bold'> CRM Client</h1>
-        <img src={menuBar} alt="menu" className='cursor-pointer' id='menu'/>
-      </div>
+          <Typography
+            className='text-xl font-bold text-white'
+            variant='h5'
+          >
+            CRM Client
+          </Typography>
 
-      <div className='flex justify-center items-center flex-col p-3'>
-          <Link
-          to='/'
-          className={
-            `${pathname === '/'
-              ? 'text-gray-400'
-              : 'text-white'
-            } my-3 hover:text-gray-300 transition-all`}
+          <AccordionSummary
+            expandIcon={
+              < MenuRoundedIcon
+                color={'action'}
+                height={2 + 'em'}
+              />
+              }
+            aria-controls='menu'
+            id='menu'
           >
-            Dashboard
-          </Link>
-          <Link
-            to='/newclient'
-            className={
-              `${pathname === '/newclient'
-                ? 'text-gray-400'
-                : 'text-white'
-              } my-3 hover:text-gray-300 transition-all`}
-          >
-            Cargar Cliente
-          </Link>
-          <Link
-            to='/editclient'
-            className={
-              `${pathname === '/updateclient'
-                ? 'text-gray-400'
-                : 'text-white'
-              } my-3 hover:text-gray-300 transition-all`}
-          >
-            Editar Cliente
-          </Link>
-          <Link
-            to='/user'
-            className={
-              `${pathname === '/user-perfil'
-                ? 'text-gray-400'
-                : 'text-white'
-              } my-3 hover:text-gray-300 transition-all`}
-          >
-            Mi Perfil
-          </Link>
-      </div>
+          </AccordionSummary>
+          
+        </Box>
+        <Box
+          className= 'text-center'
+        >
 
-      <footer className='p-3 my-3 text-center'>
-          <a href="https://github.com/leandroquiroga" target="_blank" rel="noopener noreferrer">
-            by Leandro Quiroga
-          </a>
-      </footer>
+          <List component="nav" aria-label="mailbox folders">
+              <Link
+                to='/'
+                className={
+                  `${pathname === '/'
+                    ? 'text-gray-400'
+                    : 'text-white'
+                  } my-3 hover:text-gray-300 transition-all`}
+                >
+                  Dashboard
+              </Link>
+            <Divider />
+              <Link
+                to='/newclient'
+                className={
+                  `${pathname === '/newclient'
+                    ? 'text-gray-400'
+                    : 'text-white'
+                  } my-3 hover:text-gray-300 transition-all`}
+              >
+                Cargar Cliente
+              </Link>
+            <Divider />
+              <Link
+                to='/editclient'
+                className={
+                  `${pathname === '/updateclient'
+                    ? 'text-gray-400'
+                    : 'text-white'
+                  } my-3 hover:text-gray-300 transition-all`}
+              >
+                Editar Cliente
+              </Link>
+            <Divider light />
+              <Link
+                to='/user'
+                className={
+                  `${pathname === '/user-perfil'
+                    ? 'text-gray-400'
+                    : 'text-white'
+                  } my-3 hover:text-gray-300 transition-all`}
+              >
+                Mi Perfil
+              </Link>
+          </List>
+        </Box>
 
-    </aside>
-  )
-}
+        <Box>
+          <footer className='p-3 my-3 text-center text-white'>
+            <Link
+              to='https://github.com/leandroquiroga'
+              target='_blank'
+            >
+              By Leandro Quiroga
+            </Link>
+          </footer>
+        </Box>
+    </Box>
+  );
+};
