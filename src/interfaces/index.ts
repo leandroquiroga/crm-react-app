@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export interface InitialValues {
   code: number;
   zone: string;
@@ -12,4 +14,16 @@ export interface ErrorValues {
   geocent?: string;
   locality?: string;
   province?: string;
+}
+
+
+export interface OptionsProps {
+  arrayOptions: string[];
+}
+
+export interface ButtonsProps {
+  options: "button" | "submit" | "reset" | undefined;
+  value: string;
+  actions?: () => void;
+  className?: string; 
 }
