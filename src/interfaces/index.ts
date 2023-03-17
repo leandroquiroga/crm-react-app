@@ -1,5 +1,3 @@
-import { CSSProperties } from "react";
-
 export interface InitialValues {
   code: number;
   zone: string;
