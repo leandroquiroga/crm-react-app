@@ -16,3 +16,33 @@ export const formValues: InitialValues = {
   locality: "",
   province: "",
 };
+
+
+export const OptionsZone: string[] = ['', 'Baja', 'Media', 'Alta'];
+export const OptionsProvice: string[] = [
+  '',
+  'GRAN BUENOS AIRES',
+  'GRAN BUENOS AIRES EXTRA AMBA',
+  'BUENOS AIRES',
+  'JUJUY',
+  'SALTA',
+  'FORMOSA',
+  'MISIONES',
+  'CORRIENTES',
+  'SANTA FE',
+  'CORDOBA',
+  'SGO. DEL ESTERO',
+  'CATAMARCA',
+  'LA RIOJA',
+  'TUCUMAN',
+  'SAN LUIS',
+  'SAN JUAN',
+  'ETRE RIOS',
+  'LA PAMPA',
+  'MENDOZA',
+  'NEUQUEN',
+  'RIO NEGRO', 
+  'CHUBUT',
+  'SANTA CRUZ',
+  'TIERRA DEL FUEGO',
+]

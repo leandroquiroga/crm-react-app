@@ -13,3 +13,15 @@ export interface ErrorValues {
   locality?: string;
   province?: string;
 }
+
+
+export interface OptionsProps {
+  arrayOptions: string[];
+}
+
+export interface ButtonsProps {
+  options: "button" | "submit" | "reset" | undefined;
+  value: string;
+  actions?: () => void;
+  className?: string; 
+}
