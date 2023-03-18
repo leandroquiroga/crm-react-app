@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export interface InitialValues {
   code: number;
   zone: string;
@@ -24,4 +26,17 @@ export interface ButtonsProps {
   value: string;
   actions?: () => void;
   className?: string; 
+}
+
+export interface CardProps {
+  index: number;
+  values?: InitialValues;
+  styles: string; 
+  customStyles?: CSSProperties;
+}
+
+export interface TitileProps {
+  title: string;
+  styles: string;
+  customStyles?: CSSProperties;
 }
