@@ -5,12 +5,16 @@ import { formValues, validationErrorSchema } from "../helpers";
 import { Options } from '../components/Options';
 import { OptionsZone, OptionsProvice } from '../helpers/index';
 import { Buttons } from "../components/Buttons";
+import { Title } from "../components/Title";
 
 export const NewClient: React.FC<{}> = () => {
 
   return (
     <section className="container flex flex-col justify-center items-center p-3">
-      <h1>Carga de Centrales</h1>
+      <Title
+        title="Carga de centrales"
+        styles="text-black mt-3 p-4 text-center text-xl font-semibold "
+      />
 
       <Formik
         initialValues={formValues}
