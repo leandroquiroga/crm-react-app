@@ -1,7 +1,7 @@
 import { CardCentrales } from "../components/CardCentrales";
 import { Title } from "../components/Title";
 
-export const Dashboard = () => {
+export const Dashboard = (): JSX.Element => {
   return (
     <>
       <Title

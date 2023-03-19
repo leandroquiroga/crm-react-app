@@ -1,14 +1,19 @@
-import { useLocation } from 'react-router-dom';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import Typography from '@mui/material/Typography';
-import MenuRoundedIcon from '@mui/icons-material/Menu';
-import { Box, Divider, List } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import MenuRoundedIcon from "@mui/icons-material/Menu";
+import { Box, Divider, List } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   const { pathname } = useLocation();
   return (
-    <Box className="flex-initial w-96 flex flex-col justify-between p-3 bg-cyan-700">
+    <Box
+      className="flex flex-col justify-between p-3 bg-cyan-700"
+      sx={{
+        height: 100 + "vh",
+      }}
+    >
       <Box className="flex justify-between items-center p-2">
         <Typography className="text-xl font-bold text-white" variant="h5">
           CRM Client
