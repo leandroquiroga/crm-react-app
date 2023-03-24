@@ -46,3 +46,48 @@ export const OptionsProvice: string[] = [
   'SANTA CRUZ',
   'TIERRA DEL FUEGO',
 ]
+
+export const localidades: InitialValues[] = [
+  {
+    code: 1,
+    zone: "Alta Competencia",
+    geocent: "Quilmes I",
+    locality: "Quilmes",
+    province: "Buenos Aires",
+  },
+  {
+    code: 2,
+    zone: "Media Competencia",
+    geocent: "Pilar I",
+    locality: "Pilar",
+    province: "Buenos Aires",
+  },
+  {
+    code: 3,
+    zone: "Media Competencia",
+    geocent: "Cordoba II",
+    locality: "Cordoba Capital",
+    province: "Cordoba",
+  },
+  {
+    code: 4,
+    zone: "Baja Compentencia",
+    geocent: "Bariloche III",
+    locality: "San Carlos de Bariloche",
+    province: "Rio Negro",
+  },
+  {
+    code: 5,
+    zone: "Alta Compentencia",
+    geocent: "Tierra del Fuego I",
+    locality: "Tierra del Fuego",
+    province: "Usuahia",
+  },
+  {
+    code: 6,
+    zone: "Media Competencia",
+    geocent: "Godoy Cruz III",
+    locality: "Godoy Cruz",
+    province: "Mendoza",
+  },
+];

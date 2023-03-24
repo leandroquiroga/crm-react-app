@@ -7,24 +7,18 @@ import { DeleteTwoTone, EditTwoTone } from "@mui/icons-material";
 import { CardProps } from "../interfaces/index";
 import { Button } from "@mui/material";
 
-export const CardCentrales = ({ index, styles }: CardProps): JSX.Element => {
+export const CardCentrales = ({ key, styles, localities }: CardProps): JSX.Element => {
+
   return (
-    <Card sx={{ minWidth: 210 }} key={index} className={styles} elevation={3}>
+    <Card sx={{ minWidth: 210 }} key={ key } className={styles} elevation={3}>
       <CardContent>
-        <Typography sx={{ fontSize: 16 }} color="text.secondary" gutterBottom>
-          Word of the Day
-        </Typography>
+        <Typography sx={{ fontSize: 20, textAlign: 'center' }} color="text.secondary" gutterBottom> {localities.geocent}</Typography>
+        <Typography variant="body1">{localities.locality}</Typography>
+        <Typography variant="body2">{localities.province}</Typography>
         <Typography variant="h5" component="p"></Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
-        </Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
+        <Typography color="text.secondary"> {localities.zone}</Typography>
       </CardContent>
-      <CardActions>
+      <CardActions className="flex justify-center items-center">
         <Button>
           <DeleteTwoTone color="error" className="cursor-pointer" />
         </Button>

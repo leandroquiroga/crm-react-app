@@ -64,7 +64,7 @@ export const NewClient: React.FC<{}> = () => {
             <Field
               name="geocent"
               type="text"
-              className="w-10/12 taext-center border-b-2 my-1 text-center"
+              className="w-10/12 text-center border-b-2 my-1"
             />
             <ErrorMessage
               name="geocent"

@@ -29,8 +29,8 @@ export interface ButtonsProps {
 }
 
 export interface CardProps {
-  index: number;
-  values?: InitialValues;
+  key: number;
+  localities: InitialValues;
   styles: string; 
   customStyles?: CSSProperties;
 }
