@@ -48,7 +48,7 @@ export const Sidebar = () => {
           <Link
             to="/editclient"
             className={`${
-              pathname === "/updateclient" ? "text-gray-400" : "text-white"
+              pathname === "/editclient" ? "text-gray-400" : "text-white"
             } my-3 hover:text-gray-300 transition-all`}
           >
             Editar Cliente
@@ -57,7 +57,7 @@ export const Sidebar = () => {
           <Link
             to="/user"
             className={`${
-              pathname === "/user-perfil" ? "text-gray-400" : "text-white"
+              pathname === "/user" ? "text-gray-400" : "text-white"
             } my-3 hover:text-gray-300 transition-all`}
           >
             Mi Perfil
